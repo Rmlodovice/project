@@ -8,12 +8,17 @@ document.addEventListener('DOMContentLoaded', function() {
         var username = usernameInput.value.trim().toLowerCase();
         var password = passwordInput.value.trim().toLowerCase();
 
-        if (username === "admin" && password === "admin") {
-            window.location.href = "dashboard.php";
-            alert('Welcome, admin!');
+        if (username === "admin@gmail.com" && password === "admin") {
+            window.location.href = "../assets/pages/dashboard.php"
+            alert('Welcome, Admin!');
+        } else if (username === "accounting@gmail.com" && password === "accounting") {
+            window.location.href = "../assets/pages/accounting.php"
+            alert('Welcome, Accounting!');
         } else {
             alert('Incorrect username or password!');
         }
+
+
 
         // Clear input fields after login attempt
         usernameInput.value = '';
