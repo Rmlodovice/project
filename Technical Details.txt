@@ -1,0 +1,11 @@
+GROUP 2
+
+xampp and php version: v3.3.0 / PHP 8.3.4
+github link: https://github.com/Rmlodovice/project
+
+Leader: Randell Maire Lodovice- accounting 
+  Members: Earl Tyron Tuyor - register and login and helped on admin
+	   Keith Andrei Dela Cruz - register and login and help on accounting
+	   James Ryan Mendez - register and login and helped on user
+	   Rogin Dale Burgos Lercana - user
+	   Walter James T. Bastismo - admin 

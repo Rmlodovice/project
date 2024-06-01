@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2024 at 07:51 AM
+-- Generation Time: Jun 01, 2024 at 01:20 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -57,7 +57,8 @@ INSERT INTO `users` (`id`, `fullName`, `email`, `password`) VALUES
 (11, 'Keith Dela Cruz', 'keithdelacruz@gmail.com', '$2y$10$7SpHoM48RqoHnsfVRJQwmeTzaMOBwID4huUQQ72E8D8rNAH1qx.cy'),
 (12, 'Rogin Dale Lercana', 'rogindale.lercana@gmail.com', '$2y$10$n9vYJ/iF/nhgjc088QL0luOFO0.b06aN/NJa6vIpwkT9c/6gQaNVm'),
 (13, 'Ryan Mendez', 'ryan.seno66@gmail.com', '$2y$10$6g4uu5GpEx9pHwyAfpndsOheDfFeFpbFOVv9aEiMTjadv73LAA4I6'),
-(14, 'testing', 'testing@gmail.com', '$2y$10$gP7errkWvS4cq9UHw8sgcO6wG8XS02FpL.1t.5zDZMh17KH8/A/1a');
+(14, 'testing', 'testing@gmail.com', '$2y$10$gP7errkWvS4cq9UHw8sgcO6wG8XS02FpL.1t.5zDZMh17KH8/A/1a'),
+(18, 'walter', 'wbastismo@gmail.com', '$2y$10$Owk5z/DMYkmXEciv0AL.fukzBaeMfjBAGoUqc7ubg7Xk1615IC/4G');
 
 --
 -- Indexes for dumped tables
@@ -89,7 +90,7 @@ ALTER TABLE `receipt`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
