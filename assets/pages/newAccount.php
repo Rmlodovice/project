@@ -32,7 +32,7 @@
            if ($password!==$passwordRepeat) {
             array_push($errors,"Password does not match");
            }
-           require_once "database.php";
+           require_once "../Database/database.php";
            $sql = "SELECT * FROM users WHERE email = '$email'";
            $result = mysqli_query($conn, $sql);
            $rowCount = mysqli_num_rows($result);
@@ -78,7 +78,7 @@
             </div>
             <div>
             <footer>
-                <p>Back to menu <a href="accounting.php" > Prev</a></p>
+                <p>Back to menu <a href="../Accounting/accounting.php" > Prev</a></p>
             </footer>
         </div>
         </form>

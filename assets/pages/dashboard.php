@@ -54,7 +54,7 @@
         <h2>Welcome, Admin!</h2>
     </div>
     <footer>
-        <a href="logout.php" class="btn btn-danger">Logout</a>
+        <a href="../logout/logout.php" class="btn btn-danger">Logout</a>
     </footer>
 </body>
 </html>
