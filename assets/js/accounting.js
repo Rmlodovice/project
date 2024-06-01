@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Check if email and password are admin
         if (email === "admin@gmail.com" && password === "admin") {
-            window.location.href = "../assets/pages/dashboard.php";
+            window.location.href = "../assets/View/dashboard.php";
             alert('Welcome, Admin!');
             return;
         }
 
         // Check if email and password are accounting
         if (email === "accounting@gmail.com" && password === "accounting") {
-            window.location.href = "../assets/pages/accounting.php";
+            window.location.href = "../assets/View/accounting.php";
             alert('Welcome, Accounting!');
             return;
         }
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 var response = xhr.responseText;
                 if (response === "success") {
                     // Redirect user to dashboard upon successful login
-                    window.location.href = "../assets/pages/dashboard.php";
+                    window.location.href = "../assets/View/dashboard.php";
                 } else {
                     alert(response); // Show error message
                 }
