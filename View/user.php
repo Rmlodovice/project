@@ -30,7 +30,7 @@ if(isset($_SESSION['email'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Receipt Tracker</title>
+    <title>Receipt Tracker - Student</title>
     <link rel="stylesheet" href="../assets/css/accounting.css">
     <link rel="icon" href="../assets/image/iconTabLogo.png" type="image/png">
 </head>

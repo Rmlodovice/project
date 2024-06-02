@@ -21,7 +21,7 @@ $result = mysqli_stmt_get_result($stmt);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>View Receipt</title>
+    <title>Student - View Receipt</title>
     <link rel="stylesheet" href="../assets/css/accounting.css">
     <link rel="icon" href="../assets/image/iconTabLogo.png" type="image/png">
 </head>

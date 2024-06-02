@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Receipt Tracker</title>
+    <title>Accounting - New Receipt</title>
     <link rel="stylesheet" href="../assets/css/accounting.css">
     <link rel="icon" href="../assets/image/iconTabLogo.png" type="image/png">
 </head>
