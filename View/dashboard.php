@@ -16,10 +16,10 @@
     </header>
     <div class="admin">
         <h2>Welcome, Admin!</h2>
+        <footer>
+            <a href="../index.php" class="btn btn-danger">Logout</a>
+        </footer>
     </div>
-    <footer>
-        <a href="../index.php" class="btn btn-danger">Logout</a>
-    </footer>
  
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -37,26 +37,35 @@
                     document.getElementById("searchBtn").addEventListener("click", function() {
                         var email = document.getElementById("emailSearch").value;
 
-                        fetch('database.php', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/x-www-form-urlencoded',
-                            },
-                            body: 'action=deleteUser&email=' + email
-                        })
-                        .then(function(response) {
-                            if (!response.ok) {
-                                throw new Error('Network response was not ok');
-                            }
-                            return response.text();
-                        })
-                        .then(function(data) {
-                            alert("Deleted Successfully!");
-                            location.reload();
-                        })
-                        .catch(function(error) {
-                            console.error('There was a problem with the fetch operation:', error);
-                        });
+                        // Confirm deletion
+                        var confirmed = confirm("Are you sure you want to delete the user with the email: " + email + "?");
+
+                        if (confirmed) {
+                            fetch('../assets/Database/database.php', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/x-www-form-urlencoded',
+                                },
+                                body: 'action=deleteUser&email=' + email
+                            })
+                            .then(function(response) {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not ok');
+                                }
+                                return response.text();
+                            })
+                            .then(function(data) {
+                                if (data === "User deleted successfully.") {
+                                    alert("Deleted Successfully!");
+                                    location.reload();
+                                } else {
+                                    alert("No user found with that email.");
+                                }
+                            })
+                            .catch(function(error) {
+                                console.error('There was a problem with the fetch operation:', error);
+                            });
+                        }
                     });
                 }
             });
