@@ -1,12 +1,60 @@
+<?php
+include '../assets/Database/database.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['email'];
+    $receiptNumber = $_POST['receiptNumber'];
+    $receiptValue = $_POST['receiptValue'];
+
+    // Check if the email exists in the users table
+    $sql = "SELECT * FROM users WHERE email = ?";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $email);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+
+    if (mysqli_num_rows($result) > 0) {
+        // Email exists, insert the receipt
+        $insertSql = "INSERT INTO receipt (email, receiptNumber, receiptValue) VALUES (?, ?, ?)";
+        $insertStmt = mysqli_prepare($conn, $insertSql);
+        mysqli_stmt_bind_param($insertStmt, "sss", $email, $receiptNumber, $receiptValue);
+        mysqli_stmt_execute($insertStmt);
+
+        if (mysqli_stmt_affected_rows($insertStmt) > 0) {
+            echo "Receipt added successfully.";
+        } else {
+            echo "Failed to add receipt.";
+        }
+    } else {
+        echo "No user found with that email.";
+    }
+}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add Receipt</title>
+    <link rel="stylesheet" href="../assets/css/accounting.css">
     <link rel="icon" href="../assets/image/iconTabLogo.png" type="image/png">
 </head>
 <body>
-    <a href="accounting.php">Back</a>
+    <h1>Add Receipt</h1>
+    <form method="post" action="" class="newrecord">
+        <label for="email">Email:</label>
+        <input type="text" class="form-control" id="email" name="email" required><br>
+        <label for="receiptNumber">Enter Receipt Number:</label>
+        <input type="text" class="form-control" id="receiptNumber" name="receiptNumber" required><br>
+        <label for="receiptValue">Enter Receipt Value:</label>
+        <input type="text" class="form-control" id="receiptValue" name="receiptValue" required><br>
+        <button type="submit">Add Receipt</button>
+        <div>
+        <footer>
+            <p>Back to menu <a href="accounting.php" > Prev</a></p>
+        </footer>
+    </div>
+    </form>
 </body>
 </html>
+
+    
