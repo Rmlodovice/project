@@ -34,19 +34,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add Receipt</title>
+    <title>Receipt Tracker</title>
     <link rel="stylesheet" href="../assets/css/accounting.css">
     <link rel="icon" href="../assets/image/iconTabLogo.png" type="image/png">
 </head>
 <body>
-    <h1>Add Receipt</h1>
     <form method="post" action="" class="newrecord">
-        <label for="email">Email:</label>
-        <input type="text" class="form-control" id="email" name="email" required><br>
-        <label for="receiptNumber">Enter Receipt Number:</label>
-        <input type="text" class="form-control" id="receiptNumber" name="receiptNumber" required><br>
-        <label for="receiptValue">Enter Receipt Value:</label>
-        <input type="text" class="form-control" id="receiptValue" name="receiptValue" required><br>
+        <input type="text" class="form-control" id="email" name="email" placeholder="Email: " required><br>
+        <input type="text" class="form-control" id="receiptNumber" name="receiptNumber" placeholder="Enter Receipt number: " required><br>
+        <input type="text" class="form-control" id="receiptValue" name="receiptValue" placeholder="Enter Value: " required><br>
         <button type="submit">Add Receipt</button>
         <div>
         <footer>

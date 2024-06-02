@@ -114,10 +114,80 @@ a:hover {
     justify-content:center;
   
 }
-footer
-    a { 
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tablee {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+.tablee th, .tablee td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.tablee th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+.newrecord {
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust opacity as needed */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    width: 300px;
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+.newrecord label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.newrecord input[type="text"],
+.newrecord input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.newrecord button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.newrecord button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Back link styles */
+footer {
+    margin-top: 20px; /* Add some space between the form and the link */
+}
+
+footer a {
+    display: block;
     text-decoration: none;
-    margin-top: 10rem ;
-}   a:hover {
-    color: rgba(8, 22, 8, 0.37);
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
