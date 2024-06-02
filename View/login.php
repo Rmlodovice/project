@@ -36,18 +36,13 @@ if (isset($_POST["login"])) {
             $_SESSION["userEmail"] = $email;  // Store the email in the session
             header("Location: ../View/user.php");
             exit();
-        } else {
-            echo "Incorrect Password";
-            echo "<a href='../index.php'>Back</a>";
-            exit();
-        }
+        } 
     } else {
-        echo "Email does not exist";
-        echo "<a href='../index.php'>Back</a>";
-        exit();
+        echo "Email does not exist or Password is Incorrect";
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
