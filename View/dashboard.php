@@ -12,8 +12,8 @@
         <div class="headerR">
             <h1>Receipt Tracker</h1>
             <a href="#" class="delete">Delete User</a>
+            <a style='text-decoration: none; font-size: 30px; margin-right: 12rem;' href="viewUsers.php">View Users</a>
         </div>
-        <a style='text-decoration: none;' href="viewUsers.php">View Users</a>
     </header>
     <div class="admin">
         <h2>Welcome, Admin!</h2>
