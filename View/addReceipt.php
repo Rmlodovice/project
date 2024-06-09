@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <button type="submit">Add Receipt</button>
         <div>
         <footer>
-            <p>Back to menu <a href="accounting.php" > Prev</a></p>
+            <a href="accounting.php" > Back</a>
         </footer>
     </div>
     </form>

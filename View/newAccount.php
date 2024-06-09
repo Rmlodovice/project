@@ -79,7 +79,7 @@
             </div>
             <div>
             <footer>
-                <p>Back to menu <a href="accounting.php" > Prev</a></p>
+                <a href="accounting.php" > Back</a>
             </footer>
         </div>
         </form>
